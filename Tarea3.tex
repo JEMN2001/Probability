@@ -1,0 +1,35 @@
+\documentclass[14pt]{article}
+\usepackage{amssymb}
+\usepackage[spanish]{babel}
+
+\begin{document}
+	\title{Tarea 3}
+	\author{Juan Murcia, Samuel Perez, Nicolas Duque}
+	\maketitle
+	
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item $M_x = e^{\mu_{x}s+\frac{\sigma_{x}^2s^2}{2}}$\\
+			$M_y = e^{\mu_{y}s+\frac{\sigma_{y}^2s^2}{2}}$\\
+			$M_z = M_x\cdot M_y = e^{(\mu_x+\mu_y)s+\frac{(\sigma_x^2+\sigma_y^2)s^2}{2}}$\\\\
+			Luego Z es una variable aleatoria normal, con $\mu_z=\mu_x+\mu_y$ y $\sigma_z^2=\sigma_x^2+\sigma_y^2$\\
+		\item En el código adjunto
+		\item En el código adjunto\\
+		\end{enumerate}
+	\item \begin{enumerate}
+		\item $f(x_i) = (1-p)^{x_i-1}p~~;~~f(n)=(1-q)^{n-1}q~~;~~Z=\sum_{i=1}^{N}X_i$
+		$$M_n(s)=\sum_{x=1}^{n}e^{sx}(1-p)^{x-1}p$$
+		$$= e^s\sum_{x=1}^{n}(e^s(1-p))^{x-1}p$$
+		(Por serie geometrica)$$ = \frac{pe^s}{1-e^s(1-p)}$$
+		$$= \frac{p}{e^{-s}-1+p}$$
+		Luego $M_{x_i}=\frac{p}{e^{-s}-1+p},M_n=\frac{q}{e^{-s}-1+q}$\\
+		$$M_z=M_n(ln(M_{x_i}))=\frac{q}{\frac{e^{-s}-1+p}{p}-1+q}
+		$$
+		$$= \frac{qp}{e^{-s}-1+qp}$$
+		Luego Z es una variable aleatoria geometrica, con parametro $pq$.
+		\item En el código adjunto
+		\item En el código adjunto\\
+	\end{enumerate}
+	\item En el códico adjunto
+	\end{enumerate}
+\end{document}

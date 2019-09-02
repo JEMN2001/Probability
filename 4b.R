@@ -16,11 +16,16 @@ xval = c(0,0,0,0,0,0,0,0,0,0)
 Binomial <- function(p=0.5, n=10) {
   pre = p
   prf = 1-p
+  
   x = sample(1:n, 1)
+  
   cmb = fact(n)/((fact(n-x)*fact(x)))
+  
   pre = pre**x
   prf = prf**(n-x)
+  
   xval[x] = xval[x]+1
+  
   return(cmb*pre*prf)
 }
 
